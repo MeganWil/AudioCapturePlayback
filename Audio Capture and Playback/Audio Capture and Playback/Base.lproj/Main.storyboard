@@ -18,8 +18,16 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcG-Ys-fAy">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem enabled="NO" title="Record" image="record" id="bcl-Zb-DhF"/>
-                                    <barButtonItem enabled="NO" title="Play" image="play" id="nmH-Pr-MmK"/>
+                                    <barButtonItem enabled="NO" title="Record" image="record" id="bcl-Zb-DhF">
+                                        <connections>
+                                            <action selector="recordHit:" destination="BYZ-38-t0r" id="0eQ-vU-QLh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem enabled="NO" title="Play" image="play" id="nmH-Pr-MmK">
+                                        <connections>
+                                            <action selector="playHit:" destination="BYZ-38-t0r" id="Gfh-eH-BD0"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -31,6 +39,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="PlayButton" destination="nmH-Pr-MmK" id="FQX-Qu-HTu"/>
+                        <outlet property="RecordButton" destination="bcl-Zb-DhF" id="0hk-MQ-9tt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
